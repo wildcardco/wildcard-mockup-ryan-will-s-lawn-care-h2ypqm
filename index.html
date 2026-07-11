@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Will's Lawn Care — Matteson, IL | Mowing, Cleanups & Seasonal Lawn Care</title>
+<meta name="description" content="Owner-operated lawn care in Matteson, IL and the south suburbs. Weekly mowing, spring/fall cleanups, leaf removal. Call Will directly for a free quote.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --turf:#1e3a22;
+  --turf-deep:#152a18;
+  --stripe-light:#3c6a3a;
+  --stripe-dark:#2c5230;
+  --khaki:#e9dfc8;
+  --khaki-warm:#dccfa9;
+  --paper:#f5f0e3;
+  --rust:#c05f26;
+  --rust-dark:#a34e1c;
+  --ink:#22261f;
+  --stripe:repeating-linear-gradient(100deg,var(--stripe-light) 0 64px,var(--stripe-dark) 64px 128px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Source Sans 3',sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.6;
+  font-size:1.0625rem;
+}
+h1,h2,h3,.condensed{
+  font-family:'Barlow Condensed',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+  line-height:1.05;
+}
+a{color:var(--rust-dark)}
+img{max-width:100%}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+
+/* skip link */
+.skip{position:absolute;left:-999px;top:0;background:var(--rust);color:#fff;padding:.5rem 1rem;z-index:99}
+.skip:focus{left:0}
+
+/* ---------- header ---------- */
+header.site{
+  background:var(--turf-deep);
+  color:var(--khaki);
+  border-bottom:4px solid var(--rust);
+}
+.site-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 1.25rem;max-width:1100px;margin:0 auto;flex-wrap:wrap}
+.brand{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.4rem;text-transform:uppercase;letter-spacing:.05em;color:var(--khaki);text-decoration:none;display:flex;align-items:center;gap:.55rem}
+.brand svg{flex:none}
+nav.main a{color:var(--khaki);text-decoration:none;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-weight:600;letter-spacing:.08em;font-size:.95rem;margin-left:1.1rem}
+nav.main a:hover,nav.main a:focus{color:#fff;border-bottom:2px solid var(--rust)}
+.call-pill{background:var(--rust);color:#fff!important;padding:.35rem .9rem;border-radius:2px;border-bottom:none!important}
+.call-pill:hover{background:var(--rust-dark)}
+
+/* ---------- hero: the mowed stripe signature ---------- */
+.hero{
+  background:var(--stripe);
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+.hero::after{ /* sun-worn grain */
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:5px 5px;mix-blend-mode:overlay;
+}
+.hero-inner{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:4.5rem 1.25rem 0}
+.hero-kicker{display:inline-block;background:var(--turf-deep);color:var(--khaki-warm);font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.18em;font-weight:600;font-size:.85rem;padding:.4rem .9rem;margin-bottom:1.25rem}
+.hero h1{
+  font-size:clamp(3rem,10vw,6.5rem);
+  font-weight:800;
+  max-width:14ch;
+  text-shadow:0 3px 0 rgba(0,0,0,.35);
+}
+.hero h1 em{font-style:normal;color:var(--khaki-warm)}
+.hero p.lede{max-width:34rem;font-size:1.15rem;margin:1.25rem 0 2rem;background:rgba(21,42,24,.72);padding:1rem 1.15rem;border-left:4px solid var(--rust)}
+.hero-ctas{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:3rem}
+.btn{
+  display:inline-block;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;
+  font-weight:700;letter-spacing:.08em;font-size:1.1rem;text-decoration:none;
+  padding:.85rem 1.6rem;border-radius:2px;transition:transform .15s ease,background .15s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-rust{background:var(--rust);color:#fff}
+.btn-rust:hover{background:var(--rust-dark)}
+.btn-ghost{background:var(--turf-deep);color:var(--khaki);border:2px solid var(--khaki-warm)}
+.btn-ghost:hover{background:var(--turf)}
+/* mower silhouette riding the bottom edge */
+.hero-mower{display:block;margin:0 auto;max-width:1100px;padding:0 1.25rem}
+.hero-strip{
+  position:relative;z-index:1;background:var(--turf-deep);color:var(--khaki);
+  font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-weight:600;
+  padding:.7rem 1.25rem;text-align:center;font-size:.95rem;
+}
+.hero-strip strong{color:#fff}
+
+/* ---------- stripe divider ---------- */
+.divider{height:34px;background:var(--stripe);border-top:3px solid var(--turf-deep);border-bottom:3px solid var(--turf-deep)}
+
+/* ---------- section basics ---------- */
+section{padding:4rem 0}
+.sec-kicker{color:var(--rust-dark);font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-weight:700;font-size:.9rem;display:block;margin-bottom:.5rem}
+h2{font-size:clamp(2.1rem,6vw,3.4rem);font-weight:800;color:var(--turf);margin-bottom:1.25rem}
+
+/* ---------- who's will (asymmetric split) ---------- */
+.about{background:var(--khaki)}
+.about-grid{display:grid;gap:2.5rem;align-items:start}
+@media(min-width:820px){.about-grid{grid-template-columns:5fr 4fr}}
+.about p{margin-bottom:1rem;max-width:56ch}
+.rating-card{
+  background:var(--paper);border:2px solid var(--turf);padding:1.5rem;
+  box-shadow:6px 6px 0 var(--turf);
+}
+.rating-card .stars{color:var(--rust);font-size:1.6rem;letter-spacing:.15em}
+.rating-card h3{font-size:1.5rem;color:var(--turf);margin:.4rem 0 .5rem}
+.rating-card p{font-size:.98rem}
+.about-facts{list-style:none;margin-top:1.5rem}
+.about-facts li{padding:.5rem 0 .5rem 1.6rem;position:relative;border-bottom:1px dashed rgba(30,58,34,.35);font-weight:600}
+.about-facts li::before{content:"";position:absolute;left:0;top:.95rem;width:.75rem;height:.75rem;background:var(--rust)}
+
+/* ---------- services: season ledger, not cards ---------- */
+.services{background:var(--paper)}
+.season{display:grid;gap:.75rem 2rem;padding:1.75rem 0;border-top:3px solid var(--turf)}
+.season:last-of-type{border-bottom:3px solid var(--turf)}
+@media(min-width:760px){.season{grid-template-columns:180px 1fr}}
+.season h3{font-size:1.9rem;color:var(--turf)}
+.season h3 span{display:block;font-size:.85rem;letter-spacing:.2em;color:var(--rust-dark);font-weight:600}
+.season ul{list-style:none;display:grid;gap:.4rem}
+@media(min-width:600px){.season ul{grid-template-columns:1fr 1fr}}
+.season li{padding-left:1.5rem;position:relative}
+.season li::before{content:"";position:absolute;left:0;top:.55rem;width:.9rem;height:.35rem;background:var(--stripe-dark)}
+.season li small{display:block;color:#5a5f52;font-size:.85rem}
+.services .note{margin-top:1.5rem;font-style:italic;color:#4c5145}
+
+/* ---------- service area ---------- */
+.area{background:var(--turf);color:var(--khaki)}
+.area h2{color:var(--khaki-warm)}
+.area-grid{display:grid;gap:2rem;align-items:center}
+@media(min-width:820px){.area-grid{grid-template-columns:1fr 1fr}}
+.towns{list-style:none;display:flex;flex-wrap:wrap;gap:.6rem;margin:1.25rem 0}
+.towns li{
+  font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-weight:700;letter-spacing:.06em;
+  border:2px solid var(--khaki-warm);padding:.4rem .9rem;font-size:1.05rem;
+}
+.towns li.home{background:var(--rust);border-color:var(--rust);color:#fff}
+.area p{max-width:52ch}
+.area-map{border:3px solid var(--khaki-warm);display:block;background:var(--turf-deep)}
+
+/* ---------- how it works ---------- */
+.steps ol{list-style:none;counter-reset:step;display:grid;gap:1.5rem;margin-top:1rem}
+@media(min-width:760px){.steps ol{grid-template-columns:repeat(3,1fr)}}
+.steps li{counter-increment:step;background:var(--khaki);padding:1.5rem;border-top:5px solid var(--rust)}
+.steps li::before{
+  content:counter(step,decimal-leading-zero);
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2.6rem;color:var(--turf);
+  display:block;line-height:1;margin-bottom:.4rem;
+}
+.steps h3{font-size:1.35rem;color:var(--turf);margin-bottom:.35rem}
+
+/* ---------- quote ---------- */
+.quote{background:var(--stripe);position:relative}
+.quote-box{
+  background:var(--paper);max-width:720px;margin:0 auto;padding:2.5rem 1.5rem;
+  border:3px solid var(--turf-deep);box-shadow:8px 8px 0 var(--turf-deep);
+}
+@media(min-width:640px){.quote-box{padding:3rem}}
+.quote-box .big-phone{
+  display:block;font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;
+  font-size:clamp(2rem,7vw,3.2rem);color:var(--turf);text-decoration:none;line-height:1;margin:.75rem 0 .25rem;
+}
+.quote-box .big-phone:hover{color:var(--rust-dark)}
+.quote-box small.sub{display:block;margin-bottom:1.75rem;color:#4c5145}
+form .row{display:grid;gap:1rem;margin-bottom:1rem}
+@media(min-width:600px){form .row.two{grid-template-columns:1fr 1fr}}
+label{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-weight:700;letter-spacing:.08em;font-size:.9rem;color:var(--turf);display:block;margin-bottom:.3rem}
+input,select,textarea{
+  width:100%;padding:.7rem .8rem;border:2px solid var(--turf);background:#fff;
+  font-family:'Source Sans 3',sans-serif;font-size:1rem;border-radius:2px;
+}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--rust);outline-offset:1px}
+.form-note{font-size:.9rem;color:#4c5145;margin-top:.75rem}
+
+/* ---------- footer ---------- */
+footer{background:var(--turf-deep);color:var(--khaki);padding:3rem 0 2rem;border-top:4px solid var(--rust)}
+.foot-grid{display:grid;gap:2rem}
+@media(min-width:760px){.foot-grid{grid-template-columns:1fr 1fr 1fr}}
+footer h3{font-size:1.3rem;color:var(--khaki-warm);margin-bottom:.6rem}
+footer a{color:var(--khaki)}
+footer a:hover{color:#fff}
+footer address{font-style:normal}
+.foot-bottom{margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid rgba(233,223,200,.25);font-size:.85rem;color:#a8b39c;display:flex;flex-wrap:wrap;gap:.75rem;justify-content:space-between}
+
+/* reveal */
+@media(prefers-reduced-motion:no-preference){
+  .reveal{opacity:0;transform:translateY(18px);animation:rise .7s ease forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .hero h1.reveal{animation-delay:.05s}
+  .hero p.reveal{animation-delay:.2s}
+  .hero-ctas.reveal{animation-delay:.35s}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#quote">Skip to quote request</a>
+
+<header class="site">
+  <div class="site-bar">
+    <a class="brand" href="#top" id="top">
+      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><rect width="30" height="30" fill="#c05f26"/><path d="M6 24c0-7 2-14 3-18 1 5 1 10 2 18M13 24c1-6 3-11 5-15-1 5-2 10-2 15M19 24c1-4 3-8 6-11-2 4-3 8-3 11" stroke="#f5f0e3" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      Will's Lawn Care
+    </a>
+    <nav class="main" aria-label="Main">
+      <a href="#about">Who's Will</a>
+      <a href="#services">Services</a>
+      <a href="#area">Service Area</a>
+      <a class="call-pill" href="tel:+17089277439">(708) 927-7439</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO — the mowed-stripe signature -->
+<section class="hero" aria-label="Introduction">
+  <div class="hero-inner">
+    <span class="hero-kicker">Owner-operated &middot; Matteson, IL</span>
+    <h1 class="reveal">Your lawn, <em>mowed like Will lives next door.</em></h1>
+    <p class="lede reveal">Because he practically does. Will's Lawn Care is a one-man, one-promise operation in the south suburbs: the same person quotes your yard, cuts your yard, and answers when you call. No fleet, no franchise, no runaround.</p>
+    <div class="hero-ctas reveal">
+      <a class="btn btn-rust" href="#quote">Request a Free Quote</a>
+      <a class="btn btn-ghost" href="tel:+17089277439">Call Will Direct</a>
+    </div>
+  </div>
+  <div class="hero-mower" aria-hidden="true">
+    <svg viewBox="0 0 320 60" width="220" height="42" style="display:block;margin-left:auto">
+      <!-- push mower silhouette -->
+      <g fill="#152a18">
+        <circle cx="60" cy="48" r="11"/>
+        <circle cx="60" cy="48" r="4" fill="#e9dfc8"/>
+        <circle cx="118" cy="50" r="8"/>
+        <circle cx="118" cy="50" r="3" fill="#e9dfc8"/>
+        <path d="M42 40h78l-6-14H55z"/>
+        <rect x="112" y="8" width="6" height="26" transform="rotate(28 115 21)"/>
+        <rect x="118" y="4" width="22" height="6" rx-="2"/>
+      </g>
+      <!-- clippings -->
+      <g stroke="#152a18" stroke-width="2" stroke-linecap="round">
+        <path d="M150 46l8-6M160 50l9-3M170 44l7-7"/>
+      </g>
+    </svg>
+  </div>
+  <div class="hero-strip">Rated <strong>5.0 ★</strong> on Google by our first customers &middot; Serving Matteson, Richton Park, Olympia Fields &amp; Chicago Heights</div>
+</section>
+
+<!-- WHO'S WILL -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <span class="sec-kicker">Who's Behind the Mower</span>
+      <h2>One name on the truck. One person accountable.</h2>
+      <p>Will's Lawn Care runs out of Matteson — 728 Cambridge Ave, to be exact. That matters, because lawn care in the south suburbs isn't generic. Our clay-heavy soil, wet springs, hot Julys, and heavy oak-and-maple leaf drops each fall all call for someone who's worked these yards through every season.</p>
+      <p>Will keeps the route small on purpose. Small enough that your cut happens the day it's supposed to, the lines stay straight, and if something's off, you text one person — not a call center.</p>
+      <ul class="about-facts">
+        <li>Owner-operated — Will quotes it, Will cuts it</li>
+        <li>Based in Matteson, IL, serving the south suburbs</li>
+        <li>Reliable weekly upkeep, same day each week</li>
+        <li>Straight answers on pricing before any work starts</li>
+      </ul>
+    </div>
+    <aside class="rating-card" aria-label="Google rating">
+      <span class="stars" aria-hidden="true">★★★★★</span>
+      <h3>5.0 on Google — and we intend to keep it there</h3>
+      <p>We're a young business with 4 reviews so far, all five stars. We're not going to pretend that's hundreds — but every one came from a real neighbor whose lawn Will cuts. The best proof is your own yard: try one cut and judge for yourself.</p>
+      <p style="margin-top:.75rem"><a href="tel:+17089277439"><strong>Call (708) 927-7439</strong></a> and talk to Will directly.</p>
+    </aside>
+  </div>
+</section>
+
+<div class="divider" role="presentation"></div>
+
+<!-- SERVICES: seasonal ledger -->
+<section class="services" id="services">
+  <div class="wrap">
+    <span class="sec-kicker">What We Do</span>
+    <h2>Lawn care that follows the south-suburb seasons</h2>
+
+    <div class="season">
+      <h3><span>March – May</span>Spring</h3>
+      <ul>
+        <li>Spring cleanup <small>Winter debris, matted leaves, first-cut prep</small></li>
+        <li>Seasonal lawn prep <small>Getting turf ready for the growing season</small></li>
+        <li>First mow &amp; edging <small>Setting clean lines from week one</small></li>
+        <li>Hedge &amp; bed trimming <small>Shaping things up after winter</small></li>
+      </ul>
+    </div>
+
+    <div class="season">
+      <h3><span>May – September</span>Summer</h3>
+      <ul>
+        <li>Routine weekly mowing &amp; edging <small>Same day, every week — the core of what we do</small></li>
+        <li>Trimming &amp; hedge maintenance <small>Kept tidy on a steady schedule</small></li>
+        <li>String trimming &amp; blow-down <small>Walks and driveway left clean, not clipped-over</small></li>
+      </ul>
+    </div>
+
+    <div class="season">
+      <h3><span>October – December</span>Fall</h3>
+      <ul>
+        <li>Leaf removal <small>Repeat visits through the heavy drop weeks</small></li>
+        <li>Fall cleanup <small>Beds, gutlines, and final cut before winter</small></li>
+        <li>Winter-ready trim <small>Hedges and shrubs squared away</small></li>
+      </ul>
+    </div>
+
+    <p class="note">Interested in fertilization or weed control? Ask Will when you call — he'll tell you straight what he offers and what's worth doing for your yard.</p>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area" id="area">
+  <div class="wrap area-grid">
+    <div>
+      <span class="sec-kicker" style="color:var(--rust)">Where We Work</span>
+      <h2>Matteson &amp; the neighbors around it</h2>
+      <p>Keeping the route tight is how the quality stays consistent. If you're in one of these towns, you're in the zone — if you're just outside it, call anyway and Will will tell you honestly whether he can fit you in.</p>
+      <ul class="towns">
+        <li class="home">Matteson — Home Base</li>
+        <li>Richton Park</li>
+        <li>Olympia Fields</li>
+        <li>Chicago Heights</li>
+        <li>Nearby South Suburbs</li>
+      </ul>
+    </div>
+    <svg class="area-map" viewBox="0 0 400 300" role="img" aria-label="Simple map showing Matteson at the center of the service area with surrounding towns">
+      <rect width="400" height="300" fill="#152a18"/>
+      <!-- roads -->
+      <g stroke="#3c6a3a" stroke-width="3">
+        <line x1="0" y1="150" x2="400" y2="150"/>
+        <line x1="200" y1="0" x2="200" y2="300"/>
+        <line x1="60" y1="0" x2="140" y2="300"/>
+        <line x1="0" y1="70" x2="400" y2="110"/>
+        <line x1="0" y1="230" x2="400" y2="210"/>
+      </g>
+      <!-- service radius -->
+      <circle cx="200" cy="150" r="105" fill="rgba(192,95,38,.14)" stroke="#c05f26" stroke-width="2" stroke-dasharray="7 6"/>
+      <!-- home base -->
+      <circle cx="200" cy="150" r="8" fill="#c05f26"/>
+      <text x="200" y="132" text-anchor="middle" fill="#e9dfc8" font-family="Barlow Condensed,sans-serif" font-size="18" font-weight="700" letter-spacing="1">MATTESON</text>
+      <!-- towns -->
+      <g fill="#dccfa9" font-family="Barlow Condensed,sans-serif" font-size="14" letter-spacing="1">
+        <circle cx="128" cy="212" r="5" fill="#e9dfc8"/><text x="128" y="234" text-anchor="middle">RICHTON PARK</text>
+        <circle cx="268" cy="102" r="5" fill="#e9dfc8"/><text x="268" y="88" text-anchor="middle">OLYMPIA FIELDS</text>
+        <circle cx="300" cy="208" r="5" fill="#e9dfc8"/><text x="300" y="230" text-anchor="middle">CHICAGO HEIGHTS</text>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="steps">
+  <div class="wrap">
+    <span class="sec-kicker">No-Hassle Setup</span>
+    <h2>Getting on the route is simple</h2>
+    <ol>
+      <li>
+        <h3>Call or send your info</h3>
+        <p>Give Will your address and what you're looking for — weekly cuts, a cleanup, leaf removal.</p>
+      </li>
+      <li>
+        <h3>Get a straight quote</h3>
+        <p>Will looks at the yard and gives you a clear price. No upsells, no contracts you didn't ask for.</p>
+      </li>
+      <li>
+        <h3>Same day, every week</h3>
+        <p>Your lawn gets its slot on the route. Fresh stripes on schedule — and one number to reach if anything comes up.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="quote-box">
+      <span class="sec-kicker">Free Quote</span>
+      <h2 style="margin-bottom:.25rem">Fastest way? Just call.</h2>
+      <a class="big-phone" href="tel:+17089277439">(708) 927-7439</a>
+      <small class="sub">Call or text — you'll reach Will, not a menu.</small>
+
+      <form action="tel:+17089277439" method="get" aria-label="Quote request details">
+        <div class="row two">
+          <div>
+            <label for="name">Your Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+          </div>
+        </div>
+        <div class="row two">
+          <div>
+            <label for="town">Town</label>
+            <select id="town" name="town">
+              <option>Matteson</option>
+              <option>Richton Park</option>
+              <option>Olympia Fields</option>
+              <option>Chicago Heights</option>
+              <option>Other south suburb</option>
+            </select>
+          </div>
+          <div>
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option>Weekly mowing &amp; edging</option>
+              <option>Spring/fall cleanup</option>
+              <option>Leaf removal</option>
+              <option>Trimming &amp; hedges</option>
+              <option>Not sure — let's talk</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="notes">Anything Will should know?</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Corner lot, fenced back yard, big maple out front…"></textarea>
+          </div>
+        </div>
+        <button class="btn btn-rust" type="submit" style="border:none;cursor:pointer;width:100%">Request My Free Quote</button>
+        <p class="form-note">Submitting opens your phone dialer — while the site's contact form is being set up, a quick call or text with these details gets you the fastest answer.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <h3>Will's Lawn Care</h3>
+      <address>
+        728 Cambridge Ave<br>
+        Matteson, IL 60443<br>
+        <a href="tel:+17089277439">(708) 927-7439</a>
+      </address>
+    </div>
+    <div>
+      <h3>Services</h3>
+      <p>Routine mowing &amp; edging · Spring/fall cleanup · Leaf removal · Trimming &amp; hedge maintenance · Seasonal lawn prep</p>
+    </div>
+    <div>
+      <h3>Service Area</h3>
+      <p>Matteson · Richton Park · Olympia Fields · Chicago Heights &amp; nearby south suburbs of Chicago</p>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>&copy; 2026 Will's Lawn Care. All rights reserved.</span>
+    <span>Website sample by Wild Card Creative Co</span>
+  </div>
+</footer>
+</body>
+</html>
